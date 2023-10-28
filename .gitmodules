@@ -1,0 +1,9 @@
+[submodule "Game/vendor/glfw"]
+	path = Game/vendor/glfw
+	url = git@github.com:GreedyGauntlet/glfw
+[submodule "Game/vendor/imgui"]
+	path = Game/vendor/imgui
+	url = git@github.com:GreedyGauntlet/imgui
+[submodule "Game/vendor/spdlog"]
+	path = Game/vendor/spdlog
+	url = git@github.com:GreedyGauntlet/spdlog
