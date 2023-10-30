@@ -1,0 +1,25 @@
+cc_library(
+    name = "GameLib",
+    srcs = glob([
+                   "src/**/*.cpp",
+           ]),
+    hdrs = glob([
+                   "src/**/*.h",
+           ]),
+    deps = [
+    	"//Game/vendor:glad",
+        "//Game/vendor:glfw",
+        "//Game/vendor:spdlog",
+        "//Game/vendor:imgui_backend",
+        "//Game/vendor:imgui",
+    ],
+)
+
+cc_binary(
+    name = "Game",
+    srcs = ["src/main.cpp"],
+    deps = [
+        ":GameLib",
+    ],
+)
+
