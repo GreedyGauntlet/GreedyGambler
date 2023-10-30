@@ -1,0 +1,8 @@
+# bazel
+**/bazel-bin/
+**/bazel-GreedyGambler/
+**/bazel-out/
+**/bazel-testlogs/
+
+# personal
+*.ini
