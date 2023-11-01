@@ -1,8 +1,8 @@
 #pragma once
 #include <vector>
-#include "../Panels/Panel.h"
+#include "Game.h"
 
-namespace Game {
+namespace Greed {
     class Application {
     public:
         Application();
@@ -10,6 +10,6 @@ namespace Game {
         void Run();
         void Shutdown();
     private:
-        std::vector<Panel*> m_Panels;
+        Game m_Game;
     };
 }

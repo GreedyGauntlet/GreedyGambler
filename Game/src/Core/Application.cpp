@@ -5,18 +5,9 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 
-#include "../Panels/CommandPanel.h"
-#include "../Panels/ClientHierarchyPanel.h"
-#include "../Panels/ClientDetailsPanel.h"
-
-namespace Game {
+namespace Greed {
 
     Application::Application() {
-        m_Panels = {
-            new CommandPanel(),
-			new ClientHierarchyPanel(),
-			new ClientDetailsPanel(),
-        };
     }
 
     bool Application::Initialize() {
@@ -27,10 +18,8 @@ namespace Game {
         // create window
         Window::CreateWindow("Greedy Gambler");
 
-        // initialize panels
-        for (auto panel : m_Panels) {
-            panel->Initialize();
-        }
+		// initialize game
+		m_Game.Initialize();
 
         // update loop
         while (Window::IsOpen()) {
@@ -115,10 +104,7 @@ namespace Game {
 			    ImGui::EndMenuBar();
 		    }
 
-            // update panels
-            for (auto panel : m_Panels) {
-                panel->Update();
-            }
+            m_Game.Run();
 
 		    ImGui::End();
 
@@ -127,6 +113,7 @@ namespace Game {
     }
 
     void Application::Shutdown() {
+		m_Game.Shutdown();
         Window::Shutdown();
     }
 }

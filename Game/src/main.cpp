@@ -1,7 +1,7 @@
 #include "Core/Application.h"
 
 int main(int, char**) {
-    Game::Application app;
+    Greed::Application app;
     if (app.Initialize()) {
         app.Run();
         app.Shutdown();

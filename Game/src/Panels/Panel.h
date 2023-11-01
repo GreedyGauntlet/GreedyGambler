@@ -1,6 +1,6 @@
 #pragma once
 
-namespace Game {
+namespace Greed {
     class Panel {
     public:
         virtual ~Panel() = default;

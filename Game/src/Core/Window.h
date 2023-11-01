@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-namespace Game {
+namespace Greed {
     class Window {
     public:
         static bool Initialize();
